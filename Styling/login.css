@@ -1,0 +1,180 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0a0f0d;
+  color: #da70d6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 50%;
+  padding: 20px;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: none;
+  position: absolute;
+  top: 0;
+  left: 25%;
+  z-index: 10;
+}
+.navbar h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.background-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.background-svg svg {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+.container {
+  background: rgba(18, 18, 18, 0.75);
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 350px;
+  z-index: 1;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+h2 {
+  margin-bottom: 5%;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  animation: slideInFromLeft 0.5s ease-out forwards, grow 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+input[type=email],
+input[type=password],
+input[type=tel] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #da70d6;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  transition: border-color 0.3s;
+}
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=tel]:focus {
+  outline: none;
+  border-color: #ff79c6;
+}
+
+label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #0a0f0d;
+  padding: 0 5px;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+input[type=submit],
+button {
+  background-color: #da70d6;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+input[type=submit]:hover,
+button:hover {
+  background-color: #ff79c6;
+}
+
+button {
+  background: none;
+}
+button:hover {
+  color: #ff79c6;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #da70d6;
+  font-size: 2rem;
+}
+.social-links a:hover {
+  color: #ff79c6;
+  transform: scale(1.2);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    left: 0;
+    padding: 15px;
+  }
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+  .container {
+    width: 95%;
+    padding: 2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+  .navbar h1 {
+    font-size: 1.2rem;
+  }
+  .container {
+    width: 100%;
+    padding: 1.5rem;
+    max-width: none;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .social-links a {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=login.css.map */

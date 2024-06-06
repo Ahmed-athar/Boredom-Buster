@@ -1,0 +1,131 @@
+body {
+  background-color: #0a0f0d;
+  color: #4caf50;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: #121212;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+nav .logo:hover {
+  color: #4caf50;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: #4caf50;
+}
+
+.banner {
+  text-align: center;
+  padding: 5rem 1rem;
+}
+.banner img {
+  width: 90%;
+  max-width: 900px;
+}
+
+.section {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 2px solid #4caf50;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #4caf50;
+}
+.section.joke-section, .section.quiz-section {
+  flex-direction: row;
+}
+.section .content-image,
+.section .content-text {
+  flex: 1;
+}
+.section .content-image img,
+.section .content-text img {
+  width: 100%;
+}
+.section button {
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.section button:hover {
+  background-color: #3d8b40;
+  transform: scale(1.05);
+}
+
+footer {
+  padding: 1rem;
+  background-color: #121212;
+  color: #fff;
+  margin-top: 20px;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4caf50;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6ec071;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 3rem 1rem;
+  }
+  .section {
+    flex-direction: column;
+  }
+  .section .content-image,
+  .section .content-text {
+    padding: 1rem 0;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,190 @@
+// Color Variables
+$dark-background: #0a0f0d;
+$neon-purple: #da70d6;
+$neon-pink: #ff79c6;
+$text-color: #fff;
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: $dark-background;
+  color: $neon-purple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 50%;
+  padding: 20px;
+  background-color: transparent;
+  color: $text-color;
+  box-shadow: none;
+  position: absolute;
+  top: 0;
+  left: 25%; // Adjusted for initial 50% width
+  z-index: 10;
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: left;
+  }
+}
+
+.background-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  svg {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+.container {
+  background: rgba(18, 18, 18, 0.75);
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 350px;
+  z-index: 1;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+h2 {
+  margin-bottom: 5%;
+  font-size: 1.5rem;
+  color: $text-color;
+  text-align: center;
+  animation: slideInFromLeft 0.5s ease-out forwards, grow 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid $neon-purple;
+  border-radius: 5px;
+  background-color: transparent;
+  color: $text-color;
+  transition: border-color 0.3s;
+  &:focus {
+    outline: none;
+    border-color: $neon-pink;
+  }
+}
+
+label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: $dark-background;
+  padding: 0 5px;
+  color: $text-color;
+  font-size: 0.8rem;
+}
+
+input[type="submit"],
+button {
+  background-color: $neon-purple;
+  color: $text-color;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  &:hover {
+    background-color: $neon-pink;
+  }
+}
+
+button {
+  background: none;
+  &:hover {
+    color: $neon-pink;
+  }
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: $neon-purple;
+  font-size: 2rem;
+  &:hover {
+    color: $neon-pink;
+    transform: scale(1.2);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    left: 0;
+    padding: 15px;
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .container {
+    width: 95%;
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+    h1 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .container {
+    width: 100%;
+    padding: 1.5rem;
+    max-width: none;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .social-links a {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,136 @@
+body {
+  background-color: #0a0f0d;
+  color: #ffa500;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: #121212;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+nav .logo:hover {
+  color: #ffa500;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  color: #ffa500;
+}
+
+.background-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+.background-svg svg {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  margin: 50px auto;
+  background-color: #121212;
+  border-radius: 5px;
+  border: 1px solid #ffa500;
+  box-shadow: 0 0 10px #ffa500;
+  transition: all 0.3s ease;
+  width: 95%;
+  max-width: 600px;
+  flex-grow: 1;
+}
+
+button {
+  margin-top: 2rem;
+  background-color: #ffa500;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #cc8400;
+  transform: scale(1.05);
+}
+
+footer {
+  padding: 1rem;
+  background-color: #121212;
+  color: #fff;
+  margin-top: 20px;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30c7ec;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5fd4f0;
+}
+
+.fact-text {
+  margin-top: 5rem;
+  min-height: 50px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}/*# sourceMappingURL=facts.css.map */

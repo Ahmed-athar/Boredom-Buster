@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game - Boredom Buster</title>
+    <link rel="stylesheet" href="./Styling/quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="home.html" class="logo">Boredom Buster</a>
+        <ul>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="facts.html">Facts</a></li>
+            <li><a href="joke.html">Joke</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Quiz Game</h1>
+        <div class="quiz-body">
+            <h3 id="category" class="category"></h3>
+            <h2 id="question"></h2>
+            <ul id="options" class="quiz-options"></ul>
+            <div id="result" class="quiz-result"></div>
+        </div>
+        <div class="buttons">
+            <button id="check-answer">Check Answer</button>
+            <button id="play-again" style="display:none;">Play Again</button>
+        </div>
+        <div class="counter">
+            Question <span id="current-question">1</span> of 25
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Boredom Buster. All rights reserved.</p>
+    </footer>
+
+    <script src="./scripts/quiz.js"></script>
+</body>
+
+</html>

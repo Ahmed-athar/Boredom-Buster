@@ -1,0 +1,193 @@
+// Color Variables
+$dark-background: #0a0f0d;
+$neon-purple: #da70d6;
+$nav-background: #121212;
+$text-color: #fff;
+$neon-purple-darken: darken($neon-purple, 10%);
+$neon-purple-lighten: lighten($neon-purple, 10%);
+
+body {
+  background-color: $dark-background;
+  color: $neon-purple;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: $nav-background;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    color: $text-color;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: $neon-purple;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    li {
+      a {
+        color: $text-color;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+          color: $neon-purple;
+        }
+      }
+    }
+  }
+}
+
+.background-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  svg {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+.container {
+  text-align: center;
+  padding: 3rem;
+  margin: 50px auto;
+  background-color: $nav-background;
+  border-radius: 5px;
+  border: 1px solid $neon-purple;
+  box-shadow: 0 0 10px $neon-purple;
+  transition: all 0.3s ease;
+  width: 95%;
+  max-width: 800px;
+  flex-grow: 1;
+
+  @media (max-width: 992px) {
+    padding: 2rem;
+    width: 90%;
+    max-width: 600px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    width: 85%;
+    max-width: 500px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+.quiz-body {
+  margin-bottom: 2rem;
+}
+
+.category {
+  font-size: 1.5rem;
+  color: $text-color;
+  margin-bottom: 10px;
+}
+
+.quiz-options {
+  list-style: none;
+  padding: 0;
+}
+
+.quiz-options li {
+  padding: 15px;
+  margin: 10px 0;
+  background-color: darken($nav-background, 10%);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  &.selected {
+    background-color: $neon-purple;
+    color: $text-color;
+  }
+  &:hover {
+    background-color: $neon-purple;
+    color: $text-color;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  background-color: $neon-purple;
+  border: none;
+  color: $text-color;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  &:hover {
+    background-color: $neon-purple-darken;
+    transform: scale(1.05);
+  }
+}
+
+footer {
+  padding: 1rem;
+  background-color: $nav-background;
+  color: $text-color;
+  margin-top: 20px;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.counter {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $nav-background;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $neon-purple;
+  border-radius: 5px;
+  &:hover {
+    background: $neon-purple-lighten;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}

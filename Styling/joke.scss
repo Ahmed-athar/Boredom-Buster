@@ -1,0 +1,149 @@
+// Color Variables
+$dark-background: #0a0f0d;
+$neon-blue: #30c7ec;
+$nav-background: #121212;
+$text-color: #fff;
+$neon-blue-darken: darken($neon-blue, 10%);
+$neon-blue-lighten: lighten($neon-blue, 10%);
+
+body {
+  background-color: $dark-background;
+  color: $neon-blue;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: $nav-background;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    color: $text-color;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: $neon-blue;
+    }
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    li {
+      a {
+        color: $text-color;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+          color: $neon-blue;
+        }
+      }
+    }
+  }
+}
+
+.background-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  svg {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  margin: 50px auto;
+  background-color: $nav-background;
+  border-radius: 5px;
+  border: 1px solid $neon-blue;
+  box-shadow: 0 0 10px $neon-blue;
+  transition: all 0.3s ease;
+  width: 95%;
+  max-width: 600px;
+  flex-grow: 1;
+}
+
+button {
+  margin-top: 3rem;
+  background-color: $neon-blue;
+  border: none;
+  color: $text-color;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  &:hover {
+    background-color: $neon-blue-darken;
+    transform: scale(1.05);
+  }
+}
+
+footer {
+  padding: 1rem;
+  background-color: $nav-background;
+  color: $text-color;
+  margin-top: 20px;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $nav-background;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $neon-blue;
+  border-radius: 5px;
+  &:hover {
+    background: $neon-blue-lighten;
+  }
+}
+
+.joke-text {
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+  min-height: 50px;
+  font-size: larger;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
